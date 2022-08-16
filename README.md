@@ -67,5 +67,5 @@ Your deliverables should include
 * Your application should be hosted with a password to enter.
 * You should provide a **README** containing instructions on how to clonee and start your application locally as well as the password for the live site.
 
-Please create a **private GitHub repo** with your solution and share instructions to the reviewer/s on how to run your application/s. Please give the following github users access [Jabu](https://github.com/Jabu09),[Paul](https://github.com/Paul-Harrington) (Read access is sufficient).
+Please create a **private GitHub repo** with your solution and share instructions to the reviewer/s on how to run your application/s. Please give the following github users access [Michael](https://github.com/michaeloki),[Paul](https://github.com/Paul-Harrington) (Read access is sufficient).
 
