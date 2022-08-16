@@ -1,4 +1,4 @@
-# 💸 Budget Tracking App
+# 💸 Account Ledger API
 
 Welcome! As a fintech studio, we're always working to build better digital finance tools for our customers. The purpose of the technical challenge is to give us insight in your technical abilities, design & development approach and general technical skills.
 
