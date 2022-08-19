@@ -10,7 +10,7 @@ Good luck with the challenge!
 
 The challenge consists of a coding exercise to prepare beforehand and will be concluded by an in-person/virtual discussion of your solution. Please keep a log of the significant design decisions you make during development. A brief sentence per decision is enough, but use your own judgement on the level of detail. These design decisions will be further discussed during the in-person/virtual interview.
 
-In this takehome assignment, you'll be building an app to help a person track his or her budget. Start out by assuming there will only be one user for the app. The user should be able to see their balance and enter in transactions that reduce or increase the amount of money available. Some sample data is included in *data.json*. You have one week to work on this challenge.
+In this takehome assignment, you'll be building an app to help a person track his or her budget. Start out by assuming there will only be one user for the app. The user should be able to see their balance and enter in transactions that reduce or increase the amount of money available.
 
 Here's the list of features we'd like our API to support:
 
