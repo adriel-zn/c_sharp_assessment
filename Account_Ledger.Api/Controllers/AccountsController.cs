@@ -11,7 +11,13 @@ namespace Account_Ledger.Api.Controllers
         public AccountsController(ILogger<AccountsController> logger)
         {
             _logger = logger;
-        }   
+        }
+
+        [HttpGet]
+        public ActionResult GetAccountStatement(DateTime fromDate, DateTime toDate)
+        {
+            return new OkObjectResult(null);
+        }
 
         [HttpPost]
         public ActionResult AddAccount(dynamic account)
@@ -19,14 +25,14 @@ namespace Account_Ledger.Api.Controllers
             return new OkObjectResult(null);
         }
 
-        [HttpPut]
-        public ActionResult DebitAccount(dynamic account)
+        [HttpPut("debit/{id}")]
+        public ActionResult DebitAccount(int id)
         {
             return new OkObjectResult(null);
         }
 
-        [HttpPut]
-        public ActionResult CreditAccount(dynamic account)
+        [HttpPut("credit/{id}")]
+        public ActionResult CreditAccount(int id)
         {
             return new OkObjectResult(null);
         }
