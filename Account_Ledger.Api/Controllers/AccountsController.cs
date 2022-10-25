@@ -18,5 +18,17 @@ namespace Account_Ledger.Api.Controllers
         {
             return new OkObjectResult(null);
         }
+
+        [HttpPut]
+        public ActionResult DebitAccount(dynamic account)
+        {
+            return new OkObjectResult(null);
+        }
+
+        [HttpPut]
+        public ActionResult CreditAccount(dynamic account)
+        {
+            return new OkObjectResult(null);
+        }
     }
 }
