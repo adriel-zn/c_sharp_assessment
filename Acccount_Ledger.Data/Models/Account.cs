@@ -14,6 +14,8 @@ namespace Acccount_Ledger.Data.Models
         public string AccountNumber { set; get; }
         public string AccountName { set; get; }
         public double Amount { set; get; }
-        public AccountType AccountType { set; get; }
+        [ForeignKey("AccountType")]
+        public int AccountTypeId { set; get; }
+        public virtual AccountType AccountType { set; get; }
     }
 }
