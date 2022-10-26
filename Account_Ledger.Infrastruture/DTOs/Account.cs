@@ -11,6 +11,7 @@ namespace Account_Ledger.Infrastruture.DTOs
         public string AccountNumber { set; get; }
         public string AccountName { set; get; }
         public double Amount { set; get; }
+        public int AccountTypeId { set; get; }
         public AccountType AccountType { set; get; } = AccountType.None;
 
         public Acccount_Ledger.Data.Models.Account ConvertToModel()
@@ -20,7 +21,8 @@ namespace Account_Ledger.Infrastruture.DTOs
                 Id = Id,
                 AccountNumber = this.AccountNumber,
                 AccountName = this.AccountName,
-                Amount = this.Amount
+                AccountTypeId = this.AccountTypeId,
+                Amount = this.Amount,
             };
         }
 

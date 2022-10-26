@@ -31,7 +31,25 @@ namespace Account_Ledger.Data
             optionsBuilder.UseSqlServer(@"server=.;database=LedgerAccounts;persist security info=True;user id=sa;password=1234;");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) { }
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+
+            modelBuilder.Entity<AccountType>(b =>
+            {
+                b.HasData(
+                new AccountType()
+                {
+                    Id = 1,
+                    Name = "Debit"
+
+                },
+                new AccountType()
+                {
+                    Id = 2,
+                    Name = "Credit"
+                });
+            });
+        
+        }
 
         #endregion Protected Methods
     }

@@ -11,13 +11,14 @@ namespace Account_Ledger.Api.Controllers
         private IAccountsService _accountService;
         private readonly ILogger<AccountsController> _logger;
 
-        public AccountsController(ILogger<AccountsController> logger)
+        public AccountsController(IAccountsService service,ILogger<AccountsController> logger)
         {
             _logger = logger;
+            _accountService = service;
         }
 
         #region HTTP GET
-        [HttpGet]
+        [HttpGet("statements/{accountTypeId}")]
         public ActionResult GetAccountStatements(int accountTypeId)
         {
             try
@@ -27,6 +28,10 @@ namespace Account_Ledger.Api.Controllers
             catch (UnauthorizedAccessException)
             {
                 return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch (InvalidOperationException)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
             catch
             {
@@ -48,6 +53,10 @@ namespace Account_Ledger.Api.Controllers
             {
                 return StatusCode(StatusCodes.Status403Forbidden);
             }
+            catch (InvalidOperationException)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
             catch
             {
                 return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
@@ -68,6 +77,10 @@ namespace Account_Ledger.Api.Controllers
             {
                 return StatusCode(StatusCodes.Status403Forbidden);
             }
+            catch (InvalidOperationException)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
             catch
             {
                 return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
@@ -85,6 +98,10 @@ namespace Account_Ledger.Api.Controllers
             catch (UnauthorizedAccessException)
             {
                 return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch (InvalidOperationException)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
             catch
             {
