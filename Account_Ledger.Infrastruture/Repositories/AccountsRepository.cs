@@ -11,22 +11,22 @@ namespace Account_Ledger.Infrastruture.Repository
     public class AccountsRepository : IAccountsService
     {
         private readonly DatabaseContext _context;
-        private readonly DbSet<Account> _account;
-
 
         public AccountsRepository(DatabaseContext _context)
         {
             this._context = _context;
         }
 
-        public IList<Account> GetAccountStatements(DateTime fromDate, DateTime toDate)
+        public IList<Account> GetAccountStatements(int accountTypeId)
         {
-            return null;
+            var result = _context.Accounts.ToListAsync().Result;
+
+            return result;
         }
 
         public Account AddAccount(Account account)
         {
-            _account.Add(account);
+            _context.Accounts.Add(account);
             _context.SaveChanges();
             return account;
         }
@@ -55,8 +55,8 @@ namespace Account_Ledger.Infrastruture.Repository
         {
             if (account == null)
                 throw new ArgumentNullException("AccountId is Invalid");
-            
-            _account.Remove(account);
+
+            _context.Accounts.Remove(account);
             _context.SaveChanges();
 
             return account;

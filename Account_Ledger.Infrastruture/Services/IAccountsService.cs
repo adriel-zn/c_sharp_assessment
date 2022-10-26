@@ -7,7 +7,7 @@ namespace Account_Ledger.Infrastruture.Services
 {
     public interface IAccountsService
     {
-        public IList<Account> GetAccountStatements(DateTime fromDate, DateTime toDate);
+        public IList<Account> GetAccountStatements(int AccountTypeId);
         public Account AddAccount(Account account);
         public Account DebitAccount(Account account);
         public Account CreditAccount(Account account);

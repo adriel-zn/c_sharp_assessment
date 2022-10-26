@@ -16,12 +16,13 @@ namespace Account_Ledger.Api.Controllers
             _logger = logger;
         }
 
+        #region HTTP GET
         [HttpGet]
-        public ActionResult GetAccountStatements(DateTime fromDate, DateTime toDate)
+        public ActionResult GetAccountStatements(int accountTypeId)
         {
             try
             {
-                return new OkObjectResult(_accountService.GetAccountStatements(fromDate, toDate));
+                return new OkObjectResult(_accountService.GetAccountStatements(accountTypeId));
             }
             catch (UnauthorizedAccessException)
             {
@@ -32,7 +33,9 @@ namespace Account_Ledger.Api.Controllers
                 return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
             }
         }
+        #endregion HTTP GET
 
+        #region HTTP POST
         [HttpPost]
         public ActionResult AddAccount(Account account)
         {
@@ -50,7 +53,9 @@ namespace Account_Ledger.Api.Controllers
                 return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
             }
         }
+        #endregion HTTP POST
 
+        #region HTTP PUT
         [HttpPut("debit/{id}")]
         public ActionResult DebitAccount(Account account)
         {
@@ -86,5 +91,6 @@ namespace Account_Ledger.Api.Controllers
                 return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
             }
         }
+        #endregion HTTP PUT
     }
 }
