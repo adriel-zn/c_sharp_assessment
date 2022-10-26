@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Account_Ledger.Infrastruture.Models
+namespace Acccount_Ledger.Data.Models
 {
-    public class AccountModel
+    [Table("Account")]
+    public class Account
     {
         public int Id { get; set; }
         public string AccountNumber { set; get; }
         public string AccountName { set; get; }
         public double Amount { set; get; }
-        public AccountType AccountType { set; get; } = AccountType.None;
-
-    }
-
-
-    public enum AccountType
-    {
-        None = 0,
-        Debit = 1,
-        Credit = 2
+        public AccountType AccountType { set; get; }
     }
 }

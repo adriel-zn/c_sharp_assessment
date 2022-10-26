@@ -1,4 +1,4 @@
-using Account_Ledger.Infrastruture.Models;
+using Account_Ledger.Infrastruture.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account_Ledger.Api.Controllers
@@ -15,13 +15,13 @@ namespace Account_Ledger.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetAccountStatement(DateTime fromDate, DateTime toDate)
+        public ActionResult GetAccountStatements(DateTime fromDate, DateTime toDate)
         {
             return new OkObjectResult(null);
         }
 
         [HttpPost]
-        public ActionResult AddAccount(AccountModel account)
+        public ActionResult AddAccount(Account account)
         {
             return new OkObjectResult(null);
         }
