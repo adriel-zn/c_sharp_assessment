@@ -1,3 +1,4 @@
+using Account_Ledger.Infrastruture.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account_Ledger.Api.Controllers
@@ -20,7 +21,7 @@ namespace Account_Ledger.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddAccount(dynamic account)
+        public ActionResult AddAccount(AccountModel account)
         {
             return new OkObjectResult(null);
         }

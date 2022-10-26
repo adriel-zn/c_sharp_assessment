@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Acccount_Ledger.Data\Acccount_Ledger.Data.csproj" />
-  </ItemGroup>
-
 </Project>
