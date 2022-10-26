@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account_Ledger.Infrastrutur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account_Ledger.Data", "Acccount_Ledger.Data\Account_Ledger.Data.csproj", "{B7765F7F-2143-406B-95D9-4E1C09A19D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account_Ledger.Test", "Account_Ledger.Test\Account_Ledger.Test.csproj", "{B77D688D-466B-4DC6-A25A-71F56FA9E0B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account_Ledger.Test", "Account_Ledger.Test\Account_Ledger.Test.csproj", "{27BDBC64-7BE8-4C13-A037-B0D9199D84E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{B7765F7F-2143-406B-95D9-4E1C09A19D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7765F7F-2143-406B-95D9-4E1C09A19D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7765F7F-2143-406B-95D9-4E1C09A19D74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B77D688D-466B-4DC6-A25A-71F56FA9E0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B77D688D-466B-4DC6-A25A-71F56FA9E0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B77D688D-466B-4DC6-A25A-71F56FA9E0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B77D688D-466B-4DC6-A25A-71F56FA9E0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27BDBC64-7BE8-4C13-A037-B0D9199D84E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BDBC64-7BE8-4C13-A037-B0D9199D84E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BDBC64-7BE8-4C13-A037-B0D9199D84E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BDBC64-7BE8-4C13-A037-B0D9199D84E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
