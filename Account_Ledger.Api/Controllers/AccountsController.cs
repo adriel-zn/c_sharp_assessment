@@ -1,4 +1,5 @@
 using Account_Ledger.Infrastruture.DTOs;
+using Account_Ledger.Infrastruture.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account_Ledger.Api.Controllers
@@ -7,6 +8,7 @@ namespace Account_Ledger.Api.Controllers
     [Route("api/accounts")]
     public class AccountsController : ControllerBase
     {
+        private IAccountsService _accountService;
         private readonly ILogger<AccountsController> _logger;
 
         public AccountsController(ILogger<AccountsController> logger)
@@ -17,25 +19,72 @@ namespace Account_Ledger.Api.Controllers
         [HttpGet]
         public ActionResult GetAccountStatements(DateTime fromDate, DateTime toDate)
         {
-            return new OkObjectResult(null);
+            try
+            {
+                return new OkObjectResult(_accountService.GetAccountStatements(fromDate, toDate));
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch
+            {
+                return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
+            }
         }
 
         [HttpPost]
         public ActionResult AddAccount(Account account)
         {
-            return new OkObjectResult(null);
+            try
+            {
+
+                return new OkObjectResult(_accountService.AddAccount(account.ConvertToModel()));
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch
+            {
+                return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
+            }
         }
 
         [HttpPut("debit/{id}")]
-        public ActionResult DebitAccount(int id)
+        public ActionResult DebitAccount(Account account)
         {
-            return new OkObjectResult(null);
+            try
+            {
+
+                return new OkObjectResult(_accountService.DebitAccount(account.ConvertToModel()));
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch
+            {
+                return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
+            }
         }
 
         [HttpPut("credit/{id}")]
-        public ActionResult CreditAccount(int id)
+        public ActionResult CreditAccount(Account account)
         {
-            return new OkObjectResult(null);
+            try
+            {
+
+                return new OkObjectResult(_accountService.CreditAccount(account.ConvertToModel()));
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden);
+            }
+            catch
+            {
+                return new BadRequestObjectResult(new { Success = false, V = "An error has occurred" });
+            }
         }
     }
 }
