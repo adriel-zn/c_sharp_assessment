@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account_Ledger.Api", "Accou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account_Ledger.Infrastruture", "Account_Ledger.Infrastruture\Account_Ledger.Infrastruture.csproj", "{2FCED7D1-DD31-4CEA-A179-5D459CC268EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acccount_Ledger.Data", "Acccount_Ledger.Data\Acccount_Ledger.Data.csproj", "{B7765F7F-2143-406B-95D9-4E1C09A19D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account_Ledger.Data", "Acccount_Ledger.Data\Account_Ledger.Data.csproj", "{B7765F7F-2143-406B-95D9-4E1C09A19D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
